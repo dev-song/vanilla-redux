@@ -2,12 +2,20 @@ const add = document.getElementById('add');
 const minus = document.getElementById('minus');
 const number = document.querySelector('span');
 
+let count = 0;
+
+const updateCount = () => {
+  number.textContent = count;
+}
+
 const handleAdd = () => {
-  console.log('added');
+  count++;
+  updateCount();
 }
 
 const handleMinus = () => {
-  console.log('subtracted');
+  count--;
+  updateCount();
 }
 
 add.addEventListener('click', handleAdd);
