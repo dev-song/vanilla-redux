@@ -24,6 +24,10 @@ const countModifier = (count = 0, action) => {
   }
 };
 const countStore = createStore(countModifier);
+const onChange = () => {
+  number.textContent = countStore.getState();
+}
+countStore.subscribe(onChange);
 
 const handleAdd = () => {
   countStore.dispatch({ type: 'ADD' });
