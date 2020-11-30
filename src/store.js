@@ -15,6 +15,11 @@ const deleteTodo = id => ({
   id
 });
 
+const actionCreators = {
+  addTodo,
+  deleteTodo
+};
+
 // Reducer
 const reducer = (state = [], action) => {
   switch (action.type) {
@@ -35,4 +40,5 @@ const reducer = (state = [], action) => {
 // Store
 const store = createStore(reducer);
 
+export { actionCreators };
 export default store;
